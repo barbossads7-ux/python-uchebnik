@@ -1,0 +1,104 @@
+/* Code colours for tok-* classes from @lezer/highlight classHighlighter.
+   The CodeMirror editor will use the same highlighter, so these rules style both. */
+
+.code {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  font-family: var(--font-code);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  overflow-x: auto;
+  tab-size: 4;
+  -webkit-overflow-scrolling: touch;
+}
+
+.code code {
+  font: inherit;
+}
+
+.code--plain {
+  color: var(--text-muted);
+}
+
+.tok-keyword {
+  color: #b2462a;
+  font-weight: 600;
+}
+
+.tok-string,
+.tok-string2 {
+  color: #4b7a35;
+}
+
+.tok-number,
+.tok-bool,
+.tok-atom,
+.tok-literal {
+  color: #a35d00;
+}
+
+.tok-comment {
+  color: #9b8a79;
+  font-style: italic;
+}
+
+.tok-variableName.tok-definition,
+.tok-className {
+  color: #7d4aa0;
+}
+
+.tok-propertyName {
+  color: #2f6c8c;
+}
+
+.tok-operator,
+.tok-punctuation {
+  color: #8a7363;
+}
+
+.tok-invalid {
+  color: #c0392b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tok-keyword {
+    color: #f29468;
+  }
+
+  .tok-string,
+  .tok-string2 {
+    color: #aed08f;
+  }
+
+  .tok-number,
+  .tok-bool,
+  .tok-atom,
+  .tok-literal {
+    color: #ebbd6a;
+  }
+
+  .tok-comment {
+    color: #92826f;
+  }
+
+  .tok-variableName.tok-definition,
+  .tok-className {
+    color: #d3a8ef;
+  }
+
+  .tok-propertyName {
+    color: #8cc3dc;
+  }
+
+  .tok-operator,
+  .tok-punctuation {
+    color: #c2ad9b;
+  }
+
+  .tok-invalid {
+    color: #ff8a7a;
+  }
+}
